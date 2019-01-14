@@ -186,7 +186,7 @@ Other tools/libraries
 
 ## Page Structure
 
-![1547442966079](/home/shuxin/Documents/apidocs/page.png)
+![1547442966079](./page.png)
 
 #### Introduction
 
