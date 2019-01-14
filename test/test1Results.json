@@ -1,0 +1,249 @@
+{
+  "swagger": "2.0",
+  "host": "locahost:8080",
+  "tags": [{ "name": "ManagerAPI" }],
+  "schemes": ["http"],
+  "paths": {
+    "api/manager/Octocat": {
+      "get": {
+        "tags": ["Resources"],
+        "summary": "Retrieve a specific Octocat",
+        "description": "",
+        "operationId": "Get Octocat",
+        "consumes": ["application/json"],
+        "produces": ["application/json"],
+        "parameters": [
+          {
+            "name": "OctocatId",
+            "in": "path",
+            "description": "Id of the Octocat to retrieve",
+            "required": true,
+            "type": "string",
+            "x-example": "123"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": { "$ref": "#/definitions/Octocat" }
+          },
+          "404": { "description": "The Octocat specified was not found." }
+        }
+      },
+      "put": {
+        "tags": ["Resources"],
+        "summary": "Update a Octocat name",
+        "description": "Octocat must have a name",
+        "operationId": "Update Octocat",
+        "consumes": ["application/json"],
+        "produces": ["application/json"],
+        "parameters": [
+          {
+            "name": "OctocatId",
+            "in": "path",
+            "description": "Id of the Octocat to update",
+            "required": true,
+            "type": "string",
+            "x-example": "123"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "required": false,
+            "schema": { "$ref": "#/definitions/Octocat" }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": { "$ref": "#/definitions/Octocat" }
+          },
+          "404": { "description": "The Octocat specified was not found." }
+        }
+      },
+      "delete": {
+        "tags": ["Resources"],
+        "summary": "Delete a Octocat",
+        "description": "",
+        "operationId": "Delete Octocat",
+        "consumes": ["application/json"],
+        "produces": ["application/json"],
+        "parameters": [
+          {
+            "name": "OctocatId",
+            "in": "path",
+            "description": "Id of the Octocat to update",
+            "required": true,
+            "type": "string",
+            "x-example": "123"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": { "$ref": "#/definitions/Octocat" }
+          },
+          "404": { "description": "The Octocat specified was not found." }
+        }
+      },
+      "patch": {
+        "tags": ["Resources"],
+        "summary": "Patch a Octocat name",
+        "description": "",
+        "operationId": "Patch Octocat",
+        "consumes": ["application/json"],
+        "produces": ["application/json"],
+        "parameters": [
+          {
+            "name": "OctocatId",
+            "in": "path",
+            "description": "Id of the Octocat to update",
+            "required": true,
+            "type": "string",
+            "x-example": "123"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "required": false,
+            "schema": { "$ref": "#/definitions/Octocat" }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": { "$ref": "#/definitions/Octocat" }
+          },
+          "404": { "description": "The Octocat specified was not found." }
+        }
+      }
+    },
+    "api/manager/Cryptokitties": {
+      "get": {
+        "tags": ["Resources"],
+        "summary": "Retrieve a list of all Cryptokitties.",
+        "description": "",
+        "operationId": "Get Cryptokitties",
+        "consumes": ["application/json"],
+        "produces": ["application/json"],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "type": "array",
+              "items": { "$ref": "#/definitions/Cryptokitties" }
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Octocat": {
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "parent": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": { "$ref": "#/definitions/PrettyOctocat" }
+        },
+        "child": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": { "$ref": "#/definitions/UglyOctocat" }
+        },
+        "age": { "type": "integer", "format": "int32" }
+      }
+    },
+    "PrettyOctocat": {
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "catType": {
+          "type": "string",
+          "enum": [
+            "P",
+            "R",
+            "E",
+            "T",
+            "T",
+            "Y"
+          ]
+        },
+        "x": { "type": "number", "format": "double" },
+        "y": { "type": "number", "format": "double" }
+      }
+    },
+    "UglyOctocat": {
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "catType": {
+          "type": "string",
+          "sex": ["boy", "girl"]
+        },
+        "parentId": { "type": "string" },
+        "childId": { "type": "string" },
+        "breed": {
+          "type": "ragdoll",
+          "enum": ["b", "r", "e", "e", "d"]
+        }
+      }
+    },
+    "Cryptokitties": {
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "createdDate": { "type": "integer", "format": "int64" },
+        "lastUpdated": { "type": "integer", "format": "int64" },
+        "name": { "type": "string" },
+        "status": {
+          "type": "string",
+          "enum": [
+            "C",
+            "R",
+            "Y",
+            "P",
+            "T",
+            "O"
+          ]
+        },
+        "age": { "type": "integer", "format": "int32" },
+        "child": { "$ref": "#/definitions/PrettyCryptokitties" }
+      }
+    },
+    "PrettyCryptokitties": {
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "steps": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/GorgeousCryptokitties" }
+        }
+      }
+    },
+    "GorgeousCryptokitties": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": [
+            "G",
+            "O",
+            "R",
+            "G",
+            "E",
+            "O",
+            "U",
+	    "S"
+          ]
+        }
+      }
+    }
+  }
+}

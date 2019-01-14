@@ -1,0 +1,300 @@
+{
+  "/api/manager/adhoc": { "name": "adhoc", "methods": ["post"] },
+  "/api/manager/assignables": { "name": "assignables", "methods": ["get"] },
+  "/api/manager/blueprints": {
+    "name": "blueprints",
+    "methods": ["get", "post"]
+  },
+  "/api/manager/blueprints/{blueprintId}": {
+    "name": "blueprints_{blueprintId}",
+    "methods": ["get", "put", "delete", "patch"]
+  },
+  "/api/manager/blueprints/{blueprintId}/edges": {
+    "name": "blueprints_{blueprintId}_edges",
+    "methods": ["post"]
+  },
+  "/api/manager/blueprints/{blueprintId}/edges/{edgeId}": {
+    "name": "blueprints_{blueprintId}_edges_{edgeId}",
+    "methods": ["put", "delete"]
+  },
+  "/api/manager/blueprints/{blueprintId}/nodes": {
+    "name": "blueprints_{blueprintId}_nodes",
+    "methods": ["post"]
+  },
+  "/api/manager/blueprints/{blueprintId}/nodes/{nodeId}": {
+    "name": "blueprints_{blueprintId}_nodes_{nodeId}",
+    "methods": ["put", "delete"]
+  },
+  "/api/manager/etlJobs": { "name": "etlJobs", "methods": ["get"] },
+  "/api/manager/folders": { "name": "folders", "methods": ["get", "post"] },
+  "/api/manager/folders/{fileId}": {
+    "name": "folders_{fileId}",
+    "methods": ["get", "put", "delete"]
+  },
+  "/api/manager/folders/{fileId}/variables": {
+    "name": "folders_{fileId}_variables",
+    "methods": ["get", "post"]
+  },
+  "/api/manager/folders/{fileId}/variables/{variableId}": {
+    "name": "folders_{fileId}_variables_{variableId}",
+    "methods": ["put", "delete"]
+  },
+  "/api/manager/processes": { "name": "processes", "methods": ["get", "post"] },
+  "/api/manager/processes/{processId}": {
+    "name": "processes_{processId}",
+    "methods": ["get", "put", "delete"]
+  },
+  "/api/manager/processes/{processId}/activities": {
+    "name": "processes_{processId}_activities",
+    "methods": ["get"]
+  },
+  "/api/manager/processes/{processId}/activities/{activityId}/activityItems": {
+    "name": "processes_{processId}_activities_{activityId}_activityItems",
+    "methods": ["get", "post"]
+  },
+  "/api/manager/processes/{processId}/activities/{activityId}/activityItems/{activityItemId}": {
+    "name": "processes_{processId}_activities_{activityId}_activityItems_{activityItemId}",
+    "methods": ["get", "put", "delete", "patch"]
+  },
+  "/api/manager/processes/{processId}/activities/{activityId}/activityItems/{activityItemId}/edges": {
+    "name": "processes_{processId}_activities_{activityId}_activityItems_{activityItemId}_edges",
+    "methods": ["post"]
+  },
+  "/api/manager/processes/{processId}/activities/{activityId}/activityItems/{activityItemId}/edges/{edgeId}": {
+    "name": "processes_{processId}_activities_{activityId}_activityItems_{activityItemId}_edges_{edgeId}",
+    "methods": ["put", "delete"]
+  },
+  "/api/manager/processes/{processId}/activities/{activityId}/activityItems/{activityItemId}/nodes": {
+    "name": "processes_{processId}_activities_{activityId}_activityItems_{activityItemId}_nodes",
+    "methods": ["post"]
+  },
+  "/api/manager/processes/{processId}/activities/{activityId}/activityItems/{activityItemId}/nodes/{nodeId}": {
+    "name": "processes_{processId}_activities_{activityId}_activityItems_{activityItemId}_nodes_{nodeId}",
+    "methods": ["put", "delete"]
+  },
+  "/api/manager/processes/{processId}/files": {
+    "name": "processes_{processId}_files",
+    "methods": ["get", "post"]
+  },
+  "/api/manager/processes/{processId}/files/search": {
+    "name": "processes_{processId}_files_search",
+    "methods": ["get"]
+  },
+  "/api/manager/processes/{processId}/files/{fileId}": {
+    "name": "processes_{processId}_files_{fileId}",
+    "methods": ["get", "put", "delete"]
+  },
+  "/api/manager/processes/{processId}/files/{fileId}/data": {
+    "name": "processes_{processId}_files_{fileId}_data",
+    "methods": ["get"]
+  },
+  "/api/manager/processes/{processId}/files/{fileId}/pageOptions": {
+    "name": "processes_{processId}_files_{fileId}_pageOptions",
+    "methods": ["get"]
+  },
+  "/api/manager/processes/{processId}/files/{fileId}/saves/{saveId}/data": {
+    "name": "processes_{processId}_files_{fileId}_saves_{saveId}_data",
+    "methods": ["get"]
+  },
+  "/api/manager/processes/{processId}/files/{fileId}/tasks": {
+    "name": "processes_{processId}_files_{fileId}_tasks",
+    "methods": ["get"]
+  },
+  "/api/manager/processes/{processId}/folders": {
+    "name": "processes_{processId}_folders",
+    "methods": ["get"]
+  },
+  "/api/manager/processes/{processId}/graphs": {
+    "name": "processes_{processId}_graphs",
+    "methods": ["get"]
+  },
+  "/api/manager/processes/{processId}/graphs/{graphId}": {
+    "name": "processes_{processId}_graphs_{graphId}",
+    "methods": ["get"]
+  },
+  "/api/manager/processes/{processId}/graphs/{graphId}/edges": {
+    "name": "processes_{processId}_graphs_{graphId}_edges",
+    "methods": ["post"]
+  },
+  "/api/manager/processes/{processId}/graphs/{graphId}/edges/{edgeId}": {
+    "name": "processes_{processId}_graphs_{graphId}_edges_{edgeId}",
+    "methods": ["put", "delete"]
+  },
+  "/api/manager/processes/{processId}/graphs/{graphId}/nodes": {
+    "name": "processes_{processId}_graphs_{graphId}_nodes",
+    "methods": ["post"]
+  },
+  "/api/manager/processes/{processId}/graphs/{graphId}/nodes/{nodeId}": {
+    "name": "processes_{processId}_graphs_{graphId}_nodes_{nodeId}",
+    "methods": ["put", "delete"]
+  },
+  "/api/manager/processes/{processId}/models": {
+    "name": "processes_{processId}_models",
+    "methods": ["get", "post"]
+  },
+  "/api/manager/processes/{processId}/models/{modelId}": {
+    "name": "processes_{processId}_models_{modelId}",
+    "methods": ["get", "delete"]
+  },
+  "/api/manager/processes/{processId}/notificationSettings": {
+    "name": "processes_{processId}_notificationSettings",
+    "methods": ["get", "put"]
+  },
+  "/api/manager/processes/{processId}/notificationSettings/dueDateNotifications": {
+    "name": "processes_{processId}_notificationSettings_dueDateNotifications",
+    "methods": ["get", "post"]
+  },
+  "/api/manager/processes/{processId}/notificationSettings/dueDateNotifications/{reminderId}": {
+    "name": "processes_{processId}_notificationSettings_dueDateNotifications_{reminderId}",
+    "methods": ["put", "delete"]
+  },
+  "/api/manager/processes/{processId}/notificationSettings/{settingId}": {
+    "name": "processes_{processId}_notificationSettings_{settingId}",
+    "methods": ["put"]
+  },
+  "/api/manager/processes/{processId}/revisions": {
+    "name": "processes_{processId}_revisions",
+    "methods": ["get"]
+  },
+  "/api/manager/processes/{processId}/saves": {
+    "name": "processes_{processId}_saves",
+    "methods": ["get"]
+  },
+  "/api/manager/processes/{processId}/saves/csv": {
+    "name": "processes_{processId}_saves_csv",
+    "methods": ["get"]
+  },
+  "/api/manager/processes/{processId}/saves/filterSuggestions": {
+    "name": "processes_{processId}_saves_filterSuggestions",
+    "methods": ["get"]
+  },
+  "/api/manager/processes/{processId}/saves/{saveId}/intersections": {
+    "name": "processes_{processId}_saves_{saveId}_intersections",
+    "methods": ["get"]
+  },
+  "/api/manager/processes/{processId}/saves/{saveId}/intersections/csv": {
+    "name": "processes_{processId}_saves_{saveId}_intersections_csv",
+    "methods": ["get"]
+  },
+  "/api/manager/processes/{processId}/taskStatusAudit": {
+    "name": "processes_{processId}_taskStatusAudit",
+    "methods": ["get"]
+  },
+  "/api/manager/processes/{processId}/tasks": {
+    "name": "processes_{processId}_tasks",
+    "methods": ["get"]
+  },
+  "/api/manager/processes/{processId}/tasks/bulk": {
+    "name": "processes_{processId}_tasks_bulk",
+    "methods": ["delete", "patch"]
+  },
+  "/api/manager/processes/{processId}/tasks/bulk/assignments": {
+    "name": "processes_{processId}_tasks_bulk_assignments",
+    "methods": ["post", "delete"]
+  },
+  "/api/manager/processes/{processId}/tasks/bulk/forms": {
+    "name": "processes_{processId}_tasks_bulk_forms",
+    "methods": ["post", "delete"]
+  },
+  "/api/manager/processes/{processId}/tasks/bulk/supportingDocuments": {
+    "name": "processes_{processId}_tasks_bulk_supportingDocuments",
+    "methods": ["post", "delete"]
+  },
+  "/api/manager/processes/{processId}/tasks/copy": {
+    "name": "processes_{processId}_tasks_copy",
+    "methods": ["patch"]
+  },
+  "/api/manager/processes/{processId}/tasks/{taskId}": {
+    "name": "processes_{processId}_tasks_{taskId}",
+    "methods": ["get", "put", "patch"]
+  },
+  "/api/manager/processes/{processId}/tasks/{taskId}/assignments": {
+    "name": "processes_{processId}_tasks_{taskId}_assignments",
+    "methods": ["post"]
+  },
+  "/api/manager/processes/{processId}/tasks/{taskId}/assignments/{assignmentId}": {
+    "name": "processes_{processId}_tasks_{taskId}_assignments_{assignmentId}",
+    "methods": ["delete"]
+  },
+  "/api/manager/processes/{processId}/tasks/{taskId}/forms": {
+    "name": "processes_{processId}_tasks_{taskId}_forms",
+    "methods": ["post"]
+  },
+  "/api/manager/processes/{processId}/tasks/{taskId}/forms/{taskFormId}": {
+    "name": "processes_{processId}_tasks_{taskId}_forms_{taskFormId}",
+    "methods": ["put", "delete"]
+  },
+  "/api/manager/processes/{processId}/tasks/{taskId}/reportBooks": {
+    "name": "processes_{processId}_tasks_{taskId}_reportBooks",
+    "methods": ["post"]
+  },
+  "/api/manager/processes/{processId}/tasks/{taskId}/reportBooks/jobs": {
+    "name": "processes_{processId}_tasks_{taskId}_reportBooks_jobs",
+    "methods": ["post"]
+  },
+  "/api/manager/processes/{processId}/tasks/{taskId}/reportBooks/{reportBookId}": {
+    "name": "processes_{processId}_tasks_{taskId}_reportBooks_{reportBookId}",
+    "methods": ["get", "put", "delete"]
+  },
+  "/api/manager/processes/{processId}/tasks/{taskId}/reportBooks/{reportBookId}/fileOptions": {
+    "name": "processes_{processId}_tasks_{taskId}_reportBooks_{reportBookId}_fileOptions",
+    "methods": ["put"]
+  },
+  "/api/manager/processes/{processId}/tasks/{taskId}/reportBooks/{reportBookId}/fileOptions/pageOptions": {
+    "name": "processes_{processId}_tasks_{taskId}_reportBooks_{reportBookId}_fileOptions_pageOptions",
+    "methods": ["post"]
+  },
+  "/api/manager/processes/{processId}/tasks/{taskId}/reportBooks/{reportBookId}/fileOptions/pageOptions/{pageOptionId}": {
+    "name": "processes_{processId}_tasks_{taskId}_reportBooks_{reportBookId}_fileOptions_pageOptions_{pageOptionId}",
+    "methods": ["put", "delete"]
+  },
+  "/api/manager/processes/{processId}/tasks/{taskId}/reportBooks/{reportBookId}/recipients": {
+    "name": "processes_{processId}_tasks_{taskId}_reportBooks_{reportBookId}_recipients",
+    "methods": ["post"]
+  },
+  "/api/manager/processes/{processId}/tasks/{taskId}/reportBooks/{reportBookId}/recipients/{recipientId}": {
+    "name": "processes_{processId}_tasks_{taskId}_reportBooks_{reportBookId}_recipients_{recipientId}",
+    "methods": ["delete"]
+  },
+  "/api/manager/processes/{processId}/tasks/{taskId}/supportingDocuments": {
+    "name": "processes_{processId}_tasks_{taskId}_supportingDocuments",
+    "methods": ["post"]
+  },
+  "/api/manager/processes/{processId}/tasks/{taskId}/supportingDocuments/{fileId}": {
+    "name": "processes_{processId}_tasks_{taskId}_supportingDocuments_{fileId}",
+    "methods": ["delete"]
+  },
+  "/api/manager/processes/{processId}/tasks/{taskId}/templateAutomations": {
+    "name": "processes_{processId}_tasks_{taskId}_templateAutomations",
+    "methods": ["post"]
+  },
+  "/api/manager/processes/{processId}/tasks/{taskId}/templateAutomations/{templateAutomationId}": {
+    "name": "processes_{processId}_tasks_{taskId}_templateAutomations_{templateAutomationId}",
+    "methods": ["get", "delete", "patch"]
+  },
+  "/api/manager/processes/{processId}/tasks/{taskId}/templateAutomations/{templateAutomationId}/fileOptions": {
+    "name": "processes_{processId}_tasks_{taskId}_templateAutomations_{templateAutomationId}_fileOptions",
+    "methods": ["put"]
+  },
+  "/api/manager/processes/{processId}/tasks/{taskId}/templateAutomations/{templateAutomationId}/fileOptions/pageOptions": {
+    "name": "processes_{processId}_tasks_{taskId}_templateAutomations_{templateAutomationId}_fileOptions_pageOptions",
+    "methods": ["post"]
+  },
+  "/api/manager/processes/{processId}/tasks/{taskId}/templateAutomations/{templateAutomationId}/fileOptions/pageOptions/{pageOptionId}": {
+    "name": "processes_{processId}_tasks_{taskId}_templateAutomations_{templateAutomationId}_fileOptions_pageOptions_{pageOptionId}",
+    "methods": ["delete"]
+  },
+  "/api/manager/processes/{processId}/validationReport": {
+    "name": "processes_{processId}_validationReport",
+    "methods": ["get"]
+  },
+  "/api/manager/processes/{processId}/variables": {
+    "name": "processes_{processId}_variables",
+    "methods": ["get", "post"]
+  },
+  "/api/manager/processes/{processId}/variables/{variableId}": {
+    "name": "processes_{processId}_variables_{variableId}",
+    "methods": ["put", "delete"]
+  },
+  "/api/manager/search": { "name": "search", "methods": ["get"] }
+}

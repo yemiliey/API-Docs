@@ -1,0 +1,16 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "Vena Manager API Placeholder",
+    "version": "2.0.0",
+    "title": "Vena Manager API",
+    "contact": {
+      "name": "Workflow Team"
+    }
+  },
+  "tags": [
+    {
+      "name": "ManagerAPI"
+    }
+  ]
+}

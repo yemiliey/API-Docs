@@ -1,0 +1,37 @@
+
+{ "/api/manager/etlJobs" :
+  {"methods":
+    ["get"],
+    "name":"Jobs"
+  },
+  "/api/manager/blueprints" :
+  {"methods":
+    ["get","post"],
+    "name":"Blueprints"
+  },
+  "/api/manager/blueprints/{blueprintId}" :
+  {"methods":
+    ["get","put","delete", "patch"],
+    "name":"Blueprints"
+  },
+  "/api/manager/blueprints/{blueprintId}/edges" :
+  {"methods":
+    ["post"],
+    "name":"Blueprints"
+  },
+  "/api/manager/blueprints/{blueprintId}/edges/{edgeId}" :
+  {"methods":
+    ["put","delete"],
+    "name":"Blueprints"
+  },
+  "/api/manager/blueprints/{blueprintId}/nodes" :
+  {"methods":
+    ["post"],
+    "name":"Blueprints"
+  },
+  "/api/manager/blueprints/{blueprintId}/nodes/{nodeId}" :
+  {"methods":
+    ["put","delete"],
+    "name":"Blueprints"
+  }
+}

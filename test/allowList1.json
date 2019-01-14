@@ -1,0 +1,11 @@
+
+{ "api/manager/Cryptokitties" :
+  {"methods":
+    ["get"],
+    "name":"Cryptokitties"
+  },
+  "api/manager/Octocat": {
+    "name": "Octocat",
+    "methods": ["get", "put", "delete", "patch"]
+  }
+}

@@ -1,0 +1,10 @@
+apps:
+  - script : 'npm'
+    args   : 'start'
+    cwd    : '/usr/src/swaggerapp'
+    name   : 'Vena Swagger UI'
+  - script : 'npm'
+    args   : 'start'
+    watch  : '/source'
+    cwd    : '/usr/src/slateapp/node-slate'
+    name   : 'Vena Slate'
